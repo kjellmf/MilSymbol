@@ -127,3 +127,7 @@ export class Symbol {
 
 // Gets the version of milsymbol.
 export function getVersion(): string;
+
+type StandardName = "2525" | "APP6";
+/** Sets the preferred standard '2525' or 'APP6' */
+export function setStandard(standard: StandardName): boolean;

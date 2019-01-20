@@ -148,6 +148,12 @@ export function getColorMode(mode: string): ColorMode;
 /** Register a ColorMode with a name or override an existing ColorMode. */
 export function setColorMode(name: string, colormode: ColorMode): ColorMode;
 
+/** Gets the length of the HQ staf used for HQ symbols. */
+export function getHqStaffLength(): number;
+/** Sets the length of the HQ staf used for HQ symbols. */
+export function setHqStaffLength(staff_length: number): number;
+
+
 
 // Gets the version of milsymbol.
 export function getVersion(): string;

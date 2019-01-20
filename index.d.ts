@@ -125,6 +125,22 @@ export class Symbol {
   toDataURL(): string;
 }
 
+interface Box {
+  x1: number, /**Left coordinate */
+  y1: number,
+  x2: number,
+  y2: number,
+}
+
+interface BBoxObject extends Box {
+  width(): number,
+  height(): number,
+  /** Merges one box with another returns the original box */
+  merge(box: Box): this
+}
+/** Creates a bounding box object */
+export function BBox(box?: Partial<Box>): BBoxObject;
+
 // Gets the version of milsymbol.
 export function getVersion(): string;
 

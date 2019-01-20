@@ -49,7 +49,7 @@ type SymbolOptions = {
   platformType?: string;
   quantity?: string;
   reinforcedReduced?: string;
-  sidc?:string;
+  sidc?: string;
   sigint?: string;
   signatureEquipment?: string;
   simpleStatusModifier?: boolean;
@@ -128,6 +128,5 @@ export class Symbol {
 // Gets the version of milsymbol.
 export function getVersion(): string;
 
-type StandardName = "2525" | "APP6";
-/** Sets the preferred standard '2525' or 'APP6' */
-export function setStandard(standard: StandardName): boolean;
+/** Sets the preferred standard. */
+export function setStandard(standard: "2525" | "APP6"): boolean;

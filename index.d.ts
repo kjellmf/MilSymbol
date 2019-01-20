@@ -169,3 +169,7 @@ export function getVersion(): string;
 
 /** Sets the preferred standard. */
 export function setStandard(standard: "2525" | "APP6"): boolean;
+
+type IconFunction = (iconParts: object, metadata: object, colors: object, std2525: boolean, monoColor: string, alternateMedal: boolean) => void;
+export function addIconParts(iconFunction: IconFunction): void;
+export function addIconParts(parts: IconFunction[]): void

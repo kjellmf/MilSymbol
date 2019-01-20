@@ -154,6 +154,15 @@ export function getHqStaffLength(): number;
 export function setHqStaffLength(staff_length: number): number;
 
 
+interface DashObject {
+  pending: string,
+  anticipated: string,
+  feintDummy: string
+}
+/** Gets the diffrent dash arrays used for dashed lines. */
+export function getDashArrays(): DashObject;
+/** Sets the dash arrays used for dashed lines */
+export function setDashArrays(pending: string, anticipated: string, feintDummy: string): DashObject;
 
 // Gets the version of milsymbol.
 export function getVersion(): string;

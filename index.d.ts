@@ -1,9 +1,9 @@
 type ColorMode = {
-  civilian: string;
-  friend: string;
-  hostile: string;
-  neutral: string;
-  unknown: string;
+  Civilian: string;
+  Friend: string;
+  Hostile: string;
+  Neutral: string;
+  Unknown: string;
 };
 
 type SymbolOptions = {
@@ -140,6 +140,14 @@ interface BBoxObject extends Box {
 }
 /** Creates a bounding box object */
 export function BBox(box?: Partial<Box>): BBoxObject;
+
+/** Creates a ColorMode Object with colors used for different affiliations. */
+export function ColorMode(civilian: string, friend: string, hostile: string, neutral: string, unknown: string): ColorMode;
+/** Gets a color mode that has been registred with setColorMode */
+export function getColorMode(mode: string): ColorMode;
+/** Register a ColorMode with a name or override an existing ColorMode. */
+export function setColorMode(name: string, colormode: ColorMode): ColorMode;
+
 
 // Gets the version of milsymbol.
 export function getVersion(): string;
